@@ -28,14 +28,16 @@ EMVS <- function(Y,
     temperature = 1/temperature
   }
   
-  if (class(Y) != "numeric") {
+  
+  if (!is(Y, "numeric"))  { 
     tmp <- try(Y <- as.numeric(Y), silent = TRUE)
-    if (class(tmp)[1] == "try-error") 
+    if (is(tmp, "try-error")) 
       stop("Y must numeric or able to be coerced to numeric")
-  }
-  if (class(X) != "matrix") {
+  }  
+  
+  if (!is(X, "matrix")) {
     tmp <- try(X <- model.matrix(~0 + ., data = X), silent = TRUE)
-    if (class(tmp)[1] == "try-error") 
+    if (is(tmp, "try-error")) 
       stop("X must be a matrix or able to be coerced to a matrix")
   }
   if (any(is.na(Y)) | any(is.na(X))) stop("Missing data (NA's) detected.  Take actions (e.g., removing cases, removing features, imputation) to eliminate missing data before passing Y and X to EMVS")
@@ -43,9 +45,9 @@ EMVS <- function(Y,
   if(is.unsorted(v0)) stop("Ladder of v0 values must be increasing")
   if (sum(v1 < v0) > 0) stop("v1 has to be larger than v0")
   
-  if (class(beta_init) != "numeric") {
+  if (!is(beta_init, "numeric")) {
     tmp <- try(beta_init <- as.numeric(beta_init), silent = TRUE)
-    if (class(tmp)[1] == "try-error") stop("beta_init must numeric or able to be coerced to numeric")
+    if (is(tmp, "try-error")) stop("beta_init must numeric or able to be coerced to numeric")
   }
   
   if (length(beta_init)!=ncol(X))  stop("beta_init has to be of length ncol(X)")
