@@ -29,8 +29,6 @@
 
 \usepackage{xcolor}
 
-\usepackage{hyperref}
-
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{6pt}
 
@@ -140,7 +138,7 @@ options(formatR.arrow=TRUE,width=90)
 %\VignetteEncoding{UTF-8}
 
 \title{EMVS Vignette}
-\author{Veronika Rockova and Gemma Moran}
+\author{Veronika Ro\v{c}kov\'{a} and Gemma Moran}
 \maketitle
 \section{Introduction}
 
@@ -412,14 +410,14 @@ We can see that the conjugate prior formulation severely underestimates the true
 
 \section{Conclusion}
 
-In this vignette, we described the EMVS algorithm of Rockova and George (2014) with an independent prior formulation. We demonstrated how this algorithm can be applied using the \texttt{EMVS} R package.
+In this vignette, we described the EMVS algorithm of Ro\v{c}kov\'{a} and George (2014) with an independent prior formulation. We demonstrated how this algorithm can be applied using the \texttt{EMVS} R package.
 
 \section{References}
 
 George, E. I. and McCulloch, R. E. (1997), ``Approaches for Bayesian Variable Selection", \emph{Statistica Sinica}, 7, 339-373
 
-Moran, G. E., Rockova, V. and George, E. I., (2018) ``On variance estimation for Bayesian variable selection", [arXiv:1801.03019]
+Moran, G. E., Ro\v{c}kov\'{a}, V., \& George, E. I. (2019), ``Variance prior forms for high-dimensional Bayesian variable selection,'' \emph{Bayesian Analysis}, 14(4), 1091-1119.
 
-Rockova, V. and George, E. I. (2014), ``EMVS: The EM approach to Bayesian variable selection," \emph{Journal of the American Statistical Association}, 109, 828-846
+Ro\v{c}kov\'{a}, V. and George, E. I. (2014), ``EMVS: The EM approach to Bayesian variable selection," \emph{Journal of the American Statistical Association}, 109, 828-846
 
 \end{document}

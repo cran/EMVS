@@ -17,14 +17,14 @@ double delogit(double x) {
 }
 
 vec density_norm(vec &x, double mu, double sigma) {
-  vec dens = 1/(sigma*sqrt(2*PI)) * ones<vec>(x.n_elem);    
+  vec dens = 1/(sigma*sqrt(2*M_PI)) * ones<vec>(x.n_elem);
   dens %= exp(-square(x - mu)/(2 * pow(sigma, 2))); 
   return dens;
 }
 
 
 vec density_norm_log(vec &x, double mu, double sigma) {
-  vec dens = -0.5*log(sigma*sigma*2*PI) * ones<vec>(x.n_elem);    
+  vec dens = -0.5*log(sigma*sigma*2*M_PI) * ones<vec>(x.n_elem);
   dens += -square(x - mu)/(2 * pow(sigma, 2)); 
   return dens;
 }
@@ -139,7 +139,7 @@ double log_prior(uvec& gamma, const string &type, double a, double b, int n){
     
     // Stirling approximation:
     if(!is_finite(res)){
-      res = 0.5*log(2*PI)+(x-0.5)*log(x)+(y-0.5)*log(y)-(x+y-0.5)*log(x+y);
+      res = 0.5*log(2*M_PI)+(x-0.5)*log(x)+(y-0.5)*log(y)-(x+y-0.5)*log(x+y);
     }
     
   } else if (type.compare("MRF") == 0){

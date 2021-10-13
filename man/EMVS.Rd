@@ -58,12 +58,9 @@ A list object, for which \code{EMVSplot} and \code{EMVSbest} functions exist.
   \item{type}{Type of initialization used, \code{type="null"} stands for the default cold start.}
   \item{theta}{Vector (L x 1) of estimated inclusion probabilities for \code{type="betabinomial"}.}
 }
-\author{Veronika Rockova\cr 
-Maintainer: Veronika Rockova \email{veronika.rockova@chicagobooth.edu}}
-\references{Rockova, V. and George, E. I.  (2014)
-  \emph{EMVS: The EM Approach to Bayesian Variable Selection},   
-\url{http://amstat.tandfonline.com/doi/abs/10.1080/01621459.2013.869223?journalCode=uasa20#preview}\cr
-  \emph{Journal of the American Statistical Association}
+
+\author{Veronika Rockova}
+\references{Rockova, V. and George, E. I.  (2014) EMVS: The EM Approach to Bayesian Variable Selection. \emph{Journal of the American Statistical Association}
 }
 
 
